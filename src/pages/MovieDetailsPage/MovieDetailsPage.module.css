@@ -1,0 +1,53 @@
+.container {
+    padding: 20px;
+  }
+  
+  .movieDetails {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .poster {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .details {
+    flex: 1;
+  }
+  
+  .title {
+    font-size: 2rem;
+    color: #ff577f;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .score {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  
+  .navigation {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+  }
+  
+  .activeLink {
+    color: #ff577f;
+    border-bottom: 2px solid #ff577f;
+  }
+  
+ 
+  .goBackButton {
+    margin-bottom: 20px;
+  }
+  

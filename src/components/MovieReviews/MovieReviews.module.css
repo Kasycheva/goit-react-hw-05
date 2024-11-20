@@ -1,0 +1,33 @@
+.container {
+  padding: 20px;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ff577f;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.reviewList {
+  list-style: none;
+  padding: 0;
+}
+
+.reviewItem {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.author {
+  font-weight: bold;
+  color: #555;
+}
+
+.content {
+  margin-top: 10px;
+}

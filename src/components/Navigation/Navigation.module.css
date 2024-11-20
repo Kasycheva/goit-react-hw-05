@@ -1,0 +1,41 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  background-color: #ffb6c1; 
+  border-radius: 20px;
+  margin: 0 auto;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  font-size: 1.2rem;
+}
+
+.link {
+  text-decoration: none;
+  color: #ff69b4;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.activeLink {
+  color: #ff3366;
+  font-weight: bold;
+}
+
+.link:hover {
+  transform: scale(1.1);
+}
+
+.icon {
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.activeLink .icon {
+  color: #ff3366; 
+}

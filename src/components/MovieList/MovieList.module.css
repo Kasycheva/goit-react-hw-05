@@ -1,0 +1,40 @@
+.movieList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px;
+  padding: 20px;
+  list-style: none;
+}
+
+.movieItem {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movieItem:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.movieLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.movieImage {
+  width: 100%;
+  display: block;
+  border-bottom: 2px solid #ddd;
+  border-radius: 10px 10px 0 0; 
+}
+
+.movieTitle {
+  font-size: 1rem;
+  text-align: center;
+  padding: 10px;
+  color: #333;
+}
