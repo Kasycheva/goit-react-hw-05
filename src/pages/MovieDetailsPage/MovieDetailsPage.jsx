@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useParams, useLocation, NavLink, Outlet } from 'react-router-dom';
 import { fetchMovieDetails } from '../../services/api';
 import GoBackButton from '../../components/GoBackButton/GoBackButton';
@@ -7,6 +7,7 @@ import styles from './MovieDetailsPage.module.css';
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const location = useLocation();
+  const previousLocationRef = useRef(location.state?.from || '/movies');
   const [movie, setMovie] = useState(null);
   const [error, setError] = useState(null);
 
@@ -28,7 +29,7 @@ const MovieDetailsPage = () => {
 
   return (
     <div className={styles.container}>
-      <GoBackButton />
+      <GoBackButton to={previousLocationRef.current} />
       <div className={styles.movieDetails}>
         <img
           src={poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` : 'https://via.placeholder.com/300x450'}
@@ -45,18 +46,10 @@ const MovieDetailsPage = () => {
         </div>
       </div>
       <nav className={styles.navigation}>
-        <NavLink
-          to="cast"
-          state={{ from: location.state?.from }}
-          className={({ isActive }) => (isActive ? styles.activeLink : styles.link)}
-        >
+        <NavLink to="cast" className={({ isActive }) => (isActive ? styles.activeLink : styles.link)}>
           Cast
         </NavLink>
-        <NavLink
-          to="reviews"
-          state={{ from: location.state?.from }}
-          className={({ isActive }) => (isActive ? styles.activeLink : styles.link)}
-        >
+        <NavLink to="reviews" className={({ isActive }) => (isActive ? styles.activeLink : styles.link)}>
           Reviews
         </NavLink>
       </nav>
@@ -66,3 +59,4 @@ const MovieDetailsPage = () => {
 };
 
 export default MovieDetailsPage;
+
